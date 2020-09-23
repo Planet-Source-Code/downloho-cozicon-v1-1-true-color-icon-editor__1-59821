@@ -1,0 +1,5 @@
+filter
+#*
+red = red(x - (x / pi()), y + (y / pi()))
+green = green(x + (x / pi()),y - (y / pi()))
+blue = blue(x + (x / pi()), y + (y / pi()))

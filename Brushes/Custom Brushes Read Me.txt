@@ -1,0 +1,64 @@
+****Custom Brushes****
+
+
+The very first line of a custom brush should tell CozIcon how to handle the brush. 
+
+draw - CozIcon will attempt to draw this brush when the mouse is down and/or moving.
+box - CozIcon will wait until the mouse is let up before drawing.
+
+All following lines will be considered an operation.
+
+line X1_Pos, Y1_Pos, X2_Pos, Y2_Pos(, optional color) - will draw a line at the provided coordinates
+dot X1_Pos, Y1_Pos(, optional color) - will draw a dot
+box X1_Pos, Y1_Pos, X2_Pos, Y2_Pos(, optional color) - will draw a box
+boxfilled X1_Pos, Y1_Pos, X2_Pos, Y2_Pos(, optional color) - draws a filled box
+circle Center_X1, Center_Y1, Radius(, optional color) - draws a circle
+
+(Optional color is optional and can be set as a Long value or by using RGB(Int|Int|Int))
+
+There are two file extensions reserved for custom brushes, but the format is the same.
+
+ccp - Custom Pen
+ccb - custom Box
+
+There are some special reserved variables:
+
+x1 - intial X Position on MouseDown
+y1 - intial Y Position on MouseDown
+x2 - X Position on MouseUp
+y2 - Y Position on MouseUp
+w - difference of x2 and x1
+h - difference of y2 and y1
+
+And some special functions:
+
+pi() - PI Const
+sin(number) - Returns the sine of an angle
+cos(number) - Returns the cosine of an angle
+tan(number) - Returns the tangent of an angle
+exp(number) - Returns e (the base of natural logarithms) raised to a power
+log(number) - Returns the natural logarithm of a number
+atn(number) - Returns the arctangent of a number
+abs(number) - Returns the absolute value of a number
+sgn(number) - Returns an integer indicating the sign of a number
+sqr(number) - Returns the square root of a number
+rnd(number) - Returns a random number
+int(number) -  Round to a given number of decimal places
+
+*all other variables will be ignored and could possibly break CozIcon*
+
+An example Custom Pen: (thickpen.ccp)
+
+draw
+filledbox x2 - 1,y2 - 1,x2 + 1,y2 + 1
+
+
+An example Custom Box: (cube.ccb)
+
+box
+box x1,y1 + (h / 2) - 1,x2 - (w / 2) + 1,y2
+box x1 + (w / 2) - 1,y1,x2,y2 - (h / 2) + 1
+line x1,y1 + (h / 2) - 1,x2 - (w / 2) - 1,y1
+line x2 - (w / 2) + 1,y1 + (h / 2) - 1,x2,y1
+line x1,y2,x2 - (w / 2) - 1,y1 + (h / 2) + 1
+line x2 - (w / 2) + 1,y2,x2,y1 + (h / 2) + 1

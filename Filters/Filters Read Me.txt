@@ -1,0 +1,80 @@
+*** Filters ***
+
+
+
+CozIcon runs through each pixel one by one top to bottom and left to right.
+
+The first line of a filter must denote the type, it should always be: filter.
+
+Next CozIcon looks for a block of code that corresponds with the current icon size. The line should read "#32" for 32 pixel icons, "#16" for 16 pixel icons or "#*" for any sized icon.
+
+After that CozIcon looks for a couple of _optional_ special settings:
+
+User_Input - Request the user to input a value and is assigned to a variable "ui"
+PixelSkipX - The amount of pixels to skip in X
+PixelSkipY - The amount of pixels to skip in Y
+PixelStrtX - Position of X to start
+PixelStrtY - Position of Y to start
+PixelStopX - Position of X to stop
+PixelStopY - Position of Y to start
+run_filter - executes a filter if it exists
+
+From this point all lines will be treated as code.
+
+red = code
+green = code
+blue = code
+
+Each line will assign the current pixels red, green and blue values defined in the code.
+
+* Transparent pixels will be ignored during the loop *
+
+Within the code you may use special functions, these are:
+
+pi() - PI Const
+sin(number) - Returns the sine of an angle
+cos(number) - Returns the cosine of an angle
+tan(number) - Returns the tangent of an angle
+exp(number) - Returns e (the base of natural logarithms) raised to a power
+log(number) - Returns the natural logarithm of a number
+atn(number) - Returns the arctangent of a number
+abs(number) - Returns the absolute value of a number
+sgn(number) - Returns an integer indicating the sign of a number
+sqr(number) - Returns the square root of a number
+rnd(number) - Returns a random number
+int(number) -  Round to a given number of decimal places
+red(X_Position, Y_Position) - Returns the red value of the pixel at X and Y
+green(X_Position, Y_Position) - Returns the green value of the pixel at X and Y
+blue(X_Position, Y_Position) - Returns the blue value of the pixel at X and Y
+
+In addition to that, special variables are set aside (and are the only variables allowed):
+
+x - current X position
+y - current Y position
+w - current icon's width
+h - current icon's height
+ui - if the user inputs a value, requested by the filter, ui will contain that value
+
+Math operators: "+" "-" "*" "/" "\" "^"
+
+Example (Blur.ccf):
+filter
+#*
+red = (red(x - 1, y - 1) + red(x - 1, y) + red(x - 1, y + 1) + red(x, y - 1) + red(x, y) + red(x, y + 1) + red(x + 1, y - 1) + red(x + 1, y) + red(x + 1, y + 1)) / 6
+green = (green(x - 1, y - 1) + green(x - 1, y) + green(x - 1, y + 1) + green(x, y - 1) + green(x, y) + green(x, y + 1) + green(x + 1, y - 1) + green(x + 1, y) + green(x + 1, y + 1)) / 6
+blue = (blue(x - 1, y - 1) + blue(x - 1, y) + blue(x - 1, y + 1) + blue(x, y - 1) + blue(x, y) + blue(x, y + 1) + blue(x + 1, y - 1) + blue(x + 1, y) + blue(x + 1, y + 1)) / 6
+
+Example (Darken.ccf):
+filter
+#*
+red=red(x,y) / 2
+green=green(x,y) / 2
+blue=blue(x,y) / 2
+
+Filters can execute other filters to make it easier to run seperate filters in order.
+
+Example :
+filter
+#*
+run_filter Metalize
+run_filter Blur

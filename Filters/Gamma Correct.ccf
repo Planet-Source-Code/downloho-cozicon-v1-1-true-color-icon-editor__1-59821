@@ -1,0 +1,6 @@
+filter
+#*
+user_input Enter a number 1 through 100
+red=((red(x, y) / 255) ^ (1 / (ui / 100))) * 255
+green=((green(x, y) / 255) ^ (1 / (ui / 100))) * 255
+blue=((blue(x, y) / 255) ^ (1 / (ui / 100))) * 255

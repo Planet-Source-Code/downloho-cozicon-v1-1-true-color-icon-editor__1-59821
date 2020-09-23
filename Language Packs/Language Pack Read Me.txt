@@ -1,0 +1,42 @@
+CozIcon Language Pack Spec's
+
+How it works:
+   By matching the actual Visual Basic control's and form's name it will try and set it's caption or text.
+
+
+The 'Form' must be set first because any control following will be associated with said form.
+
+Example:
+
+Form=Form1
+Command1=Hello
+Command2=World
+
+One pack can manipulate multiple Forms in the same fashion:
+
+Form=Form1
+Command1=Hello
+Command2=World
+Form=Form2
+Command1=Goodbye
+Command2=World
+
+You may also assign the controls' FontName and FontSize:
+
+Form=Form1
+FontName=Arial
+FontSize=14
+Command1=Hello
+Command2=World
+
+
+Within Visual Basic You need only three(3) Functions to execute this feature:
+
+  Public Function FindObject(ByRef frm As Form, ByVal ControlName As String) As Object
+  Public Function FindWindow(ByRef FormName As String) As Form
+  Public Function LoadLanguage(ByVal FileName As String)
+
+
+FindObject - Checks the form 'frm' for every control against 'ControlName' and returns the object.
+FindWindow - Checks every loaded form against 'FormName' and returns the form's object.
+LoadLangage - Will load the specified 'FileName'. It references FindObject and FindWindow functions.

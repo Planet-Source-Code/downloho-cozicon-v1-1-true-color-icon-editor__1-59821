@@ -1,0 +1,10 @@
+box
+line x1 + (w / 6),y1,x2 - (w / 6),y1
+line x1 + (w / 6),y2,x2 - (w / 6),y2
+line x1,y1 + (h / 6),x1,y2 - (h / 6)
+line x2,y1 + (h / 6),x2,y2 - (h / 6)
+line x1 + (w / 6) - 1,y1,x1,y1 + (h / 6) - 1
+line x2 - (w / 6) + 1 1,y1,x2,y1 + (h / 6) - 1
+line x1 + (w / 6) - 1,y2,x1,y2 - (h / 6) + 1
+line x2 - (w / 6) + 1,y2,x2,y2 - (h / 6) + 1
+<pre>......   ..   ..   ......</pre>

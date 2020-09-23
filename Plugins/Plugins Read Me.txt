@@ -1,0 +1,9 @@
+*** Plugins ***
+
+
+
+CozIcon plugin system uses compiled programs(*.exe) for it's plugins.
+
+CozIcon will executed any program located in Plugins directory (it's important that you only download plugins from trusted websites!) and it will set it's command to load a copy of the current icon. The program should load the file, manipulate it and then let CozIcon know that it's finished(via SendMessage and SetText Api's).
+
+Please refer to the Example Plugin for Visual Basic source of a plugin.
