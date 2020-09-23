@@ -1,0 +1,9 @@
+filter
+#32
+red = 255 - red(x, y)
+green = 255 - green(x, y)
+blue = 255 - blue(x, y)
+#16
+red = 255 - red(x, y)
+green = 255 - green(x, y)
+blue = 255 - blue(x, y)

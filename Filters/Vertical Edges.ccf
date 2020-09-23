@@ -1,0 +1,5 @@
+filter
+#*
+red = (red(x - 1, y - 1) - (red(x, y - 1) * 2) + red(x + 1, y - 1) - red(x - 1, y) - (red(x, y) * 2) + red(x + 1, y) - red(x - 1, y + 1) - (red(x, y + 1) * 2) + red(x + 1, y + 1))
+green = (green(x - 1, y - 1) - (green(x, y - 1) * 2) + green(x + 1, y - 1) - green(x - 1, y) - (green(x, y) * 2) + green(x + 1, y) - green(x - 1, y + 1) - (green(x, y + 1) * 2) + green(x + 1, y + 1))
+blue = (blue(x - 1, y - 1) - (blue(x, y - 1) * 2) + blue(x + 1, y - 1) - blue(x - 1, y) - (blue(x, y) * 2) + blue(x + 1, y) - blue(x - 1, y + 1) - (blue(x, y + 1) * 2) + blue(x + 1, y + 1))

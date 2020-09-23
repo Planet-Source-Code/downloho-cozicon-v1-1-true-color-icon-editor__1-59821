@@ -1,0 +1,5 @@
+filter
+#*
+red=blue(x, y)
+green=red(x, y)
+blue=green(x, y)

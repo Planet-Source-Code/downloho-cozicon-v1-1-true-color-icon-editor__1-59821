@@ -1,0 +1,5 @@
+filter
+#*
+red = red(x, y)
+green = green(x, y) / 5
+blue = blue(x, y) / 5

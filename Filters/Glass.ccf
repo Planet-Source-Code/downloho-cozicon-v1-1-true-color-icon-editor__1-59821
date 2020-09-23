@@ -1,0 +1,4 @@
+filter
+#*
+run_filter Metalize
+run_filter Blur

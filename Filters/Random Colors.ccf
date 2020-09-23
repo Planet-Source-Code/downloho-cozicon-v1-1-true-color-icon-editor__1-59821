@@ -1,0 +1,5 @@
+filter
+#*
+red = rnd(255) + 0
+green = rnd(255) + 0
+blue = rnd(255) + 0

@@ -1,0 +1,11 @@
+box
+filledbox x1,y1,x2,y2
+line x1,y1,x2,y1,rgb(255|255|255)
+line x1 + 1,y1 + 1,x2 - 1,y1 + 1,rgb(192|192|192)
+line x1 + ,y2 - 1,x2 - 1,y2 - 1,rgb(128|128|128)
+line x1,y2,x2,y2,0
+line x1,y1,x1,y2,rgb(255|255|255)
+line x1 + 1,y1 + 1,x1 + 1,y2 - 1,rgb(192|192|192)
+line x2 - 1,y1 + 1,x2 - 1,y2 - 1,rgb(128|128|128)
+line x2,y1,x2,y2,0
+<pre>,,,,,,'''.,'''.,'''.,....</pre>

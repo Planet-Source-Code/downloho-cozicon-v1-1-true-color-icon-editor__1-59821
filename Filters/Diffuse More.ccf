@@ -1,0 +1,5 @@
+filter
+#*
+red = red((x + rnd(5)) - 2, (y + rnd(5)) + 2)
+green = green((x + rnd(5)) - 2, (y + rnd(5)) - 2)
+blue = blue((x + rnd(5)) - 2, (y + rnd(5)) - 2)

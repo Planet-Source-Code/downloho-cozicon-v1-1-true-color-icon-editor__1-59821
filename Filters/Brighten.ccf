@@ -1,0 +1,6 @@
+filter
+#*
+user_input Enter a percentage value 1 - 100
+red=red(x, y) + ((ui / 100) * 256)
+green=green(x, y) + ((ui / 100) * 256)
+blue=blue(x, y) + ((ui / 100) * 256)

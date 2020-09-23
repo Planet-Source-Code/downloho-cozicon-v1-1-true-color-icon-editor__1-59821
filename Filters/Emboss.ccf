@@ -1,0 +1,5 @@
+filter
+#*
+red=red(x, y) - red(x + 1, y + 1) + 128
+green=green(x, y) - green(x + 1, y + 1) + 128
+blue=blue(x, y) - blue(x + 1, y + 1) + 128

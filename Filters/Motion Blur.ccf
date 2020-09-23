@@ -1,0 +1,6 @@
+filter
+#*
+PixelStrtX 2
+red = (red(x - 4, y - 1) + red(x - 3, y) + red(x - 2, y + 1) + red(x - 1, y) + red(x, y)) / 5
+green = (green(x - 4, y - 1) + green(x - 3, y) + green(x - 2, y + 1) + green(x - 1, y) + green(x, y)) / 5
+blue = (blue(x - 4, y - 1) + blue(x - 3, y) + blue(x - 2, y + 1) + blue(x - 1, y) + blue(x, y)) / 5

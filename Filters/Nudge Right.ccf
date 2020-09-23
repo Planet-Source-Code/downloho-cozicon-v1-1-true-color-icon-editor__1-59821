@@ -1,0 +1,5 @@
+filter
+#*
+red = ((red(x - 1, y) * 4) + (red(x, y) * 8)) / 12
+green = ((green(x - 1, y) * 4) + (green(x, y) * 8)) / 12
+blue = ((blue(x - 1, y) * 4) + (blue(x, y) * 8)) / 12

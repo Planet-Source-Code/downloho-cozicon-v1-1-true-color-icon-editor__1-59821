@@ -1,0 +1,5 @@
+filter
+#*
+red = (red(x - 2, y - 2) - (red(x + 2, y + 2) * 2))
+green = (green(x - 2, y - 2) - (green(x + 2, y + 2) * 2))
+blue = (blue(x - 2, y - 2) - (blue(x + 2, y + 2) * 2))
